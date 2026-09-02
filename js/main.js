@@ -1,4 +1,4 @@
-/* Avendaño Abogados — interacciones */
+/* Avendaño & Asociados — interacciones */
 (function () {
   "use strict";
 
@@ -148,7 +148,7 @@
     var seed = function () {
       if (seeded) return;
       seeded = true;
-      botSay("Hola, le saluda el equipo de Avendaño Abogados. ¿En qué podemos ayudarle hoy?", 600);
+      botSay("Hola, le saluda el equipo de Avendaño & Asociados. ¿En qué podemos ayudarle hoy?", 600);
     };
 
     var openChat = function () {

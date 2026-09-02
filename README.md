@@ -1,11 +1,11 @@
-# Avendaño Abogados
+# Avendaño & Asociados
 
-Sitio web de **Avendaño Abogados**, despacho de litigantes con
+Sitio web oficial de **Avendaño & Asociados, S.C.**, despacho de litigantes con
 sede en la Ciudad de México.
 
 ## La firma
 
-Avendaño Abogados nació en 2009 con una idea sencilla: que quien confía un
+Avendaño & Asociados nació en 2009 con una idea sencilla: que quien confía un
 problema legal hable siempre con el abogado que lo va a defender, y no con un
 intermediario. Somos un equipo consolidado —ni un despacho de escritorio ni una
 fábrica de expedientes— con la estructura para responder a asuntos de peso y la
@@ -65,8 +65,10 @@ python3 -m http.server 5173
 ### Pendientes antes del lanzamiento definitivo
 
 - **Datos de contacto** — confirmar piso/oficina exactos, teléfono y correo del pie.
-- **Equipo** — incorporar los perfiles de los demás integrantes cuando se confirmen.
-- **Fotografía de Alejandro** — reemplazar el monograma temporal `AA` por el retrato aprobado.
+- **Nombres y cédulas del equipo** — los `Céd. Prof. 0000000` son marcadores.
+- **Fotografías del equipo** — hoy son imágenes de ejemplo en `assets/img/team/`
+  (`claudia-avendano.jpg`, `maria-cardenas.jpg`, `jorge-torres.jpg`,
+  `laura-mendoza.jpg`); se reemplazan por las reales conservando el nombre.
 - **Chat** — hoy es una simulación en `js/main.js` con el estilo de Zendesk;
   para el chat real, pega el snippet del *Web Widget* de Zendesk y elimina el
   bloque `<div class="zchat">`.
@@ -74,4 +76,4 @@ python3 -m http.server 5173
 
 ---
 
-© Avendaño Abogados. Todos los derechos reservados.
+© Avendaño & Asociados, S.C. Todos los derechos reservados.
