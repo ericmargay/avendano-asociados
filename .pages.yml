@@ -1,0 +1,63 @@
+media:
+  input: assets/img/notas
+  output: /assets/img/notas
+
+content:
+  - name: notas
+    label: Notas
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{title}.md"
+      field: create
+    view:
+      fields: [title, category, date]
+      primary: title
+      sort: [date, title, category]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        type: string
+        default: post
+        hidden: true
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: description
+        label: Resumen
+        type: text
+        required: true
+        description: Se muestra en el listado y al compartir la nota.
+      - name: category
+        label: Materia
+        type: select
+        required: true
+        options:
+          values: [Penal, Familiar, Amparo, Mercantil, Civil, Laboral]
+      - name: date
+        label: Fecha de publicación
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: author
+        label: Autor
+        type: string
+        default: Avendaño Abogados
+        required: true
+      - name: image
+        label: Miniatura para sitio y redes
+        type: image
+        required: true
+        options:
+          path: assets/img/notas
+          extensions: [jpg, jpeg, png, webp]
+          rename: true
+      - name: body
+        label: Contenido
+        type: rich-text
+        required: true

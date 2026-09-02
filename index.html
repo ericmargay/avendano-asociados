@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!doctype html>
 <html lang="es-MX">
 <head>
@@ -415,26 +418,42 @@
         <h2 class="reveal">Notas para entender su asunto.</h2>
         <p class="section-sub reveal">Explicamos, en lenguaje llano, temas que a nuestros clientes les surgen una y otra vez.</p>
       </header>
-      <div class="posts">
-        <article class="post reveal">
-          <p class="post-meta"><span>Penal</span> · 12 jun 2026</p>
-          <h3><a href="#contacto">Me citaron a declarar: qué hacer (y qué no) antes de la audiencia</a></h3>
-          <p>Una guía breve sobre sus derechos frente a la citación del Ministerio Público y por qué conviene llegar con defensa.</p>
-          <span class="post-read">Leer nota →</span>
+      <div class="posts posts-featured">
+        {% for post in site.posts limit: 3 %}
+        <article class="post post-card reveal">
+          <a class="post-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy" />
+          </a>
+          <div class="post-copy">
+            <p class="post-meta"><span>{{ post.category }}</span> · {{ post.date | date: "%d/%m/%Y" }}</p>
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.description }}</p>
+            <a class="post-read" href="{{ post.url | relative_url }}">Leer nota <span aria-hidden="true">→</span></a>
+          </div>
         </article>
-        <article class="post reveal">
-          <p class="post-meta"><span>Familiar</span> · 28 may 2026</p>
-          <h3><a href="#contacto">Pensión alimenticia: cómo se calcula y cómo se hace cumplir</a></h3>
-          <p>Del porcentaje sobre el ingreso al descuento vía nómina: lo esencial para no quedarse a la mitad del proceso.</p>
-          <span class="post-read">Leer nota →</span>
-        </article>
-        <article class="post reveal">
-          <p class="post-meta"><span>Amparo</span> · 09 may 2026</p>
-          <h3><a href="#contacto">La suspensión en el amparo: para qué sirve y cuándo pedirla</a></h3>
-          <p>Qué protege la suspensión del acto reclamado y por qué muchas veces es la parte más urgente del juicio.</p>
-          <span class="post-read">Leer nota →</span>
-        </article>
+        {% endfor %}
       </div>
+      {% if site.posts.size > 3 %}
+      <details class="posts-more reveal">
+        <summary>Ver {{ site.posts.size | minus: 3 }} notas más <span aria-hidden="true">＋</span></summary>
+        <div class="posts posts-secondary">
+          {% for post in site.posts offset: 3 %}
+          <article class="post post-card">
+            <a class="post-image" href="{{ post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+              <img src="{{ post.image | relative_url }}" alt="" width="1200" height="630" loading="lazy" />
+            </a>
+            <div class="post-copy">
+              <p class="post-meta"><span>{{ post.category }}</span> · {{ post.date | date: "%d/%m/%Y" }}</p>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+              <p>{{ post.description }}</p>
+              <a class="post-read" href="{{ post.url | relative_url }}">Leer nota <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </details>
+      {% endif %}
+      <p class="editor-access reveal">¿Forma parte de la firma? <a href="https://app.pagescms.org/" target="_blank" rel="noopener noreferrer">Abrir el editor de notas <span aria-hidden="true">↗</span></a></p>
     </div>
   </section>
 

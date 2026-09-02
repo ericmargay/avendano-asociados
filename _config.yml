@@ -1,0 +1,9 @@
+title: Avendaño Abogados
+description: Litigio y estrategia jurídica en Ciudad de México.
+url: https://ericmargay.github.io
+baseurl: /avendano-asociados
+lang: es-MX
+permalink: /notas/:title/
+future: true
+exclude:
+  - README.md

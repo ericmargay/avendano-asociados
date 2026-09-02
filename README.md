@@ -40,6 +40,9 @@ publicarse en GitHub Pages.
 
 ```
 ├── index.html          Página única con todas las secciones
+├── _posts/             Notas editables en Markdown
+├── _layouts/post.html  Plantilla de cada nota y metadatos para redes
+├── .pages.yml          Configuración del editor Pages CMS
 ├── css/styles.css      Estilos (paleta, tipografía, responsive)
 ├── js/main.js          Menú móvil, animaciones, chat, validación
 ├── assets/img/         Favicon, imagen social y fotos del equipo
@@ -52,6 +55,17 @@ publicarse en GitHub Pages.
 python3 -m http.server 5173
 # abre http://localhost:5173
 ```
+
+Las notas usan Jekyll. Para renderizarlas localmente con sus páginas individuales,
+ejecuta `bundle exec jekyll serve` si tienes Jekyll instalado.
+
+### Editor de notas
+
+Las publicaciones se administran desde [Pages CMS](https://app.pagescms.org/).
+Inicia sesión con GitHub, instala la aplicación para este repositorio y abre
+`ericmargay/avendano-asociados`. Cualquier integrante con acceso de escritura al
+repositorio podrá crear o editar notas, elegir su materia y subir una miniatura.
+Cada guardado genera un commit y activa automáticamente GitHub Pages.
 
 ### Publicar en GitHub Pages
 
